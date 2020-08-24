@@ -10,7 +10,7 @@
           <NextArticle />
         </div>
         <div
-          v-for="article of articles.slice(this.$store.state.skip.value,this.$store.state.skip.value+2)"
+          v-for="article of articles.slice(this.$store.state.skip.value,this.$store.state.skip.value+4)"
           :key="article.slug"
         >
           <div>
@@ -79,7 +79,7 @@ export default {
   methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
-      return new Date(date).toLocaleDateString("de", options);
+      return new Date(date).toLocaleDateString("en", options);
     },
   },
   mounted() {},
