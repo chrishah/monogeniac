@@ -25,8 +25,8 @@ jobs:
     # https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-vue-and-nuxt
     # Fist deployment:
     # https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-first-deployment-with-github_token
-    - name: deploy
+    - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB }}
-          force_orphan: true
+          publish_dir: ./public
