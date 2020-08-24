@@ -20,7 +20,7 @@ round(x)
 import * as blob
 ```
 
-<img src="/img/orcid.png" class="w-auto" />
+<img src="/monogeniac/img/orcid.png" class="w-auto" />
 
 ## Lorem Ipsum
 

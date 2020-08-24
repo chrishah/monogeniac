@@ -4,6 +4,7 @@
 export default {
   target: 'static',
   router: {
+    base: '/monogeniac/'
   },
   build: {
   },
