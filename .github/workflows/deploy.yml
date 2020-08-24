@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: CI
+name: GitHub Pages
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -17,9 +17,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-      with:
-          persist-credentials: false
+    - uses: actions/checkout@v2
+
+    # Some Build
+    - name: Build
 
     # https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-vue-and-nuxt
     # Fist deployment:
