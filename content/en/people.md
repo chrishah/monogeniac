@@ -7,23 +7,28 @@ category: Main
 
 # People
 
+## @Uni Graz
+### Christoph Hahn
+![Christoph](/monogeniac/img/orcid.png)
+
+I am a blabla
+
+### Philipp Resl
+![Philipp](/monogeniac/img/orcid.png)
+
+I am blabla
+
+### Samuel Leeming
+![Sam](/monogeniac/img/orcid.png)
+
+I am blabla
+
+- Hannes Oberreiter ![Hannes](/monogeniac/img/orcid.png)
+
+<img src="/monogeniac/img/orcid.png" width="100px" />
 
 
-- Hannes Oberreiter ![Hannes](/img/orcid.png)
-
-<img src="/img/orcid.png" width="100px" />
-
-
-## Europa
-
-### Herbert
-
-Text
-
-
-
-
-## Coll.
+## Collaborators
 
 
 
