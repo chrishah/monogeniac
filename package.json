@@ -1,7 +1,7 @@
 {
-  "name": "hahn-intro",
+  "name": "monogeniac-intro",
   "version": "1.0.0",
-  "description": "Landingpage for b.tree",
+  "description": "Landingpage for Monogeniac",
   "author": "Hannes Oberreiter",
   "scripts": {
     "dev": "nuxt",

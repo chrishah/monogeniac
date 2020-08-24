@@ -1,19 +1,24 @@
-![CI](https://github.com/HannesOberreiter/btree_info/workflows/CI/badge.svg?branch=master)
+![ghpages](https://github.com/chrishah/monogeniac/workflows/ghpages/badge.svg)
 
-# b.tree Landing Page
+# Project Monogeniac Info Page
 
-Info and Landing Page for b.tree Application and personal information about Hannes Oberreiter.
+Info Page for Project Monogeniac. You can find the live page under: [https://chrishah.github.io/monogeniac/](https://chrishah.github.io/monogeniac/)
 
-Made with @vue, @nuxt, @nuxt-content and @tailwindcss.
+## Folder Structure for Content Editing
+
+Content: `content/en/`
+News: `content/en/articles/`
+Images: `static/img/`
+Map Data: `assets/data/locations.json`
 
 ## Development
 
 ```bash
 # install dependencies
-$ yarn install
+yarn install
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+# serve with hot reload at localhost:3000/monogeniac
+yarn dev
 ```
 
 Then you can start edit the [content](./content) directory.
@@ -21,8 +26,8 @@ Then you can start edit the [content](./content) directory.
 # Test for production
 
 ```bash
-$ yarn generate
-$ serve dist/ # npm install -g serve
+yarn generate
+serve dist/ # npm install -g serve
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work on nuxt/vue, check out [Nuxt.js docs](https://nuxtjs.org).

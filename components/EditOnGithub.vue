@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     link () {
-      return `https://github.com/HannesOberreiter/btree_info/edit/master/content${this.document.path}${this.document.extension}`
+      return `https://github.com/chrishah/monogeniac/edit/master/content${this.document.path}${this.document.extension}`
     }
   }
 }

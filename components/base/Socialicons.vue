@@ -2,7 +2,7 @@
   <ul :class="socialclass">
     <li class="mr-4">
       <a
-        href="https://twitter.com/btree_hannes"
+        href="https://twitter.com/monogeniac"
         target="_blank"
         rel="noopener noreferrer"
         title="Twitter"
@@ -14,7 +14,7 @@
     </li>
     <li class="mr-4">
       <a
-        href="https://github.com/HannesOberreiter"
+        href="https://github.com/chrishah/monogeniac"
         target="_blank"
         rel="noopener noreferrer"
         title="Github"
@@ -25,7 +25,7 @@
       </a>
     </li>
 
-    <li class="mr-4">
+    <!--<li class="mr-4">
       <a
         href="https://www.youtube.com/c/HannesOberreiter"
         target="_blank"
@@ -36,7 +36,7 @@
       >
         <IconYouTube class="w-6 h-6" />
       </a>
-    </li>
+    </li>-->
   </ul>
 </template>
 
