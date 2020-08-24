@@ -46,7 +46,7 @@ jobs:
     # Fist deployment:
     # https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-first-deployment-with-github_token
     - name: deploy
-            uses: peaceiris/actions-gh-pages@v3
-            with:
-              github_token: ${{ secrets.GITHUB }}
-              publish_dir: ./dist
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB }}
+        publish_dir: ./dist
