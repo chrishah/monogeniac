@@ -6,10 +6,10 @@ Info Page for Project Monogeniac. You can find the live page under: [https://chr
 
 ## Folder Structure for Content Editing
 
-Content: `content/en/`
-News: `content/en/articles/`
-Images: `static/img/`
-Map Data: `assets/data/locations.json`
+- Content: `content/en/`
+- News: `content/en/articles/`
+- Images: `static/img/`
+- Map Data: `assets/data/locations.json`
 
 ## Development
 

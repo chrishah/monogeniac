@@ -7,10 +7,10 @@
       <article class="prose max-w-none lg:px-8 dark:text-gray-100 dark:prose-dark">
         <nuxt-content :document="doc" />
         <div class="float-right">
-          <NextArticle />
+          <NextArticle v-if="this.$store.state.skip.jump <= articles.length" />
         </div>
         <div
-          v-for="article of articles.slice(this.$store.state.skip.value,this.$store.state.skip.value+4)"
+          v-for="article of articles.slice(this.$store.state.skip.value,this.$store.state.skip.value+this.$store.state.skip.jump)"
           :key="article.slug"
         >
           <div>
@@ -21,11 +21,11 @@
           </div>
         </div>
         <div class="float-right">
-          <NextArticle />
+          <NextArticle v-if="this.$store.state.skip.jump <= articles.length" />
         </div>
       </article>
     </div>
-    <ArticleToc :toc="news_toc.slice(this.$store.state.skip.value,this.$store.state.skip.value+2)" />
+    <ArticleToc :toc="news_toc.slice(this.$store.state.skip.value,this.$store.state.skip.value+this.$store.state.skip.jump)" />
   </div>
 </template>
 

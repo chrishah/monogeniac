@@ -4,7 +4,7 @@
     <l-map :zoom="zoom" :center="center" :options="mapOptions" style="height: 90%; z-index:9">
       <l-tile-layer :url="url" :attribution="attribution" />
       <template v-for="(location, index) in locations">
-        <l-marker :key="index" :lat-lng="[location.lat, location.lng]">
+        <l-marker :ref="index" :key="index" :lat-lng="[location.lat, location.lng]">
           <l-icon>
             <b class="text-black">
               {{index}}
@@ -29,7 +29,7 @@
       </thead>-->
       <tbody>
         <tr v-for="(location, index) in locations" :key="index">
-          <td class="px-4 py-2">{{index}}</td>
+          <td class="px-4 py-2" v-on:click="highlight(index)"><b style="cursor:pointer;">{{index}}</b></td>
           <td class="px-4 py-2">{{location.text}}</td>
         </tr>
       </tbody>
@@ -55,7 +55,11 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    highlight(id){
+      this.$refs[id][0].mapObject.openPopup()
+    },
+  },
 
   computed: {
     dynamicSize() {
