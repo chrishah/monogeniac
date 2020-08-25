@@ -1,5 +1,6 @@
 .nuxt-content {
-  & h2, & h3 {
+  & h2,
+  & h3 {
     /* Fix anchor scrollTo */
     &::before {
       display: block;
@@ -12,11 +13,11 @@
 
     /* Style anchor links on headings added by @nuxt/content */
     & > a {
-      @apply ml-5;
+      @apply ml-5 ml-0;
 
       &::before {
-        content: "#";
-        @apply text-green-500 font-normal -ml-5 pr-2 absolute opacity-100;
+        /* content: "#"; */
+        /* @apply text-green-500 font-normal -ml-5 pr-2 absolute opacity-100; */
       }
 
       @screen lg {
