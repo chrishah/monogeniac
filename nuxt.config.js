@@ -91,5 +91,10 @@ export default {
     lazy: true,
     seo: false,
     langDir: 'i18n/'
+  },
+  hooks: {
+    "vue-renderer:ssr:templateParams": function (params) {
+      params.HEAD = params.HEAD.replace('<base href="/monogeniac/">', "");
+    }
   }
 }
