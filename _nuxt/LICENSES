@@ -1,10 +1,10 @@
 /* @preserve
- * Leaflet 1.6.0, a JS library for interactive maps. http://leafletjs.com
+ * Leaflet 1.7.1, a JS library for interactive maps. http://leafletjs.com
  * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
 /*!
-  * vue-router v3.4.3
+  * vue-router v3.4.8
   * (c) 2020 Evan You
   * @license MIT
   */
@@ -18,8 +18,8 @@
  */
 
 /*!
- * Vue.js v2.6.11
- * (c) 2014-2019 Evan You
+ * Vue.js v2.6.12
+ * (c) 2014-2020 Evan You
  * Released under the MIT License.
  */
 
@@ -33,12 +33,6 @@
 /*!
  * vue-client-only v2.0.0
  * (c) 2019-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
-
-/*!
- * vue-i18n v8.21.0 
- * (c) 2020 kazuya kawaguchi
  * Released under the MIT License.
  */
 
