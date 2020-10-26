@@ -1,8 +1,8 @@
 ---
-title: Map
-description: 'Sampling Map'
-position: 13
-category: Main
+title: Our network
+description: 'Sampling locations'
+position: 14
+category: Data
 ---
 
 # Overview of Sample Position
