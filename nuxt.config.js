@@ -8,7 +8,6 @@ export default {
   },
   build: {
   },
-  mode: "universal",
   head: {
     titleTemplate: (chunk) => {
       if (chunk) {
