@@ -18,7 +18,7 @@
     "glob": "^7.1.6",
     "leaflet": "^1.7.1",
     "lodash.groupby": "^4.6.0",
-    "marked": "^1.2.2",
+    "marked": "^1.2.4",
     "nuxt": "^2.14.7",
     "nuxt-i18n": "^6.15.4",
     "nuxt-leaflet": "^0.0.22",
@@ -32,8 +32,8 @@
     "@nuxtjs/color-mode": "^2.0.0",
     "@nuxtjs/tailwindcss": "^3.2.0",
     "@tailwindcss/typography": "^0.2.0",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.4",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
     "tailwindcss-dark-mode": "^1.1.7"
   }
 }
