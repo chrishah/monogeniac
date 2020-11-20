@@ -24,9 +24,8 @@ module.exports = {
         'nuxt-gray': theme('colors.nuxt.gray'),
         'nuxt-lightgreen': theme('colors.nuxt.lightgreen'),
         'nuxt-green': theme('colors.nuxt.green')
-      })
-    },
-    typography: theme => ({
+      }),
+      typography: theme => ({
       default: {
         css: {
           a: {
@@ -54,7 +53,7 @@ module.exports = {
             padding: theme('padding.1'),
             borderWidth: 1,
             borderColor: theme('colors.gray.200'),
-            borderRadius: theme('borderRadius.default')
+            borderRadius: theme('borderRadius.DEFAULT')
           },
           'code::before': {
             content: ''
@@ -116,6 +115,7 @@ module.exports = {
         }
       }
     })
+    },
   },
   variants: {
     margin: ['responsive', 'last'],
@@ -140,7 +140,7 @@ module.exports = {
       'nuxt.config.js'
     ],
     options: {
-      whitelist: ['dark-mode']
+      safelist: ['dark-mode']
     }
   }
 }
