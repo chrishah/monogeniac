@@ -1,6 +1,7 @@
 {
   "name": "monogeniac-intro",
   "version": "1.0.0",
+  "private": true,
   "description": "Landingpage for Monogeniac",
   "author": "Hannes Oberreiter",
   "scripts": {
