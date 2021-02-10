@@ -1,5 +1,5 @@
 
-//const URL = process.env.NODE_ENV === 'production' ? 'https://chrishah.github.io' : 'http://localhost:3000';
+const URL = process.env.NODE_ENV === 'production' ? 'https://chrishah.github.io/monogeniac/' : 'http://localhost:3000/monogeniac';
 
 export default {
   target: 'static',
@@ -88,7 +88,8 @@ export default {
     defaultLocale: 'en',
     parsePages: true,
     lazy: true,
-    seo: false,
+    seo: true,
+    baseUrl: URL,
     langDir: 'i18n/'
   },
   hooks: {
