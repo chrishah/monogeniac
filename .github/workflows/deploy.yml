@@ -41,6 +41,9 @@ jobs:
       run: yarn generate
     - name: List output files
       run: ls
+    - name: Setting up .env
+        env:
+            NODE_ENV: production
 
     # https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-vue-and-nuxt
     # Fist deployment:
