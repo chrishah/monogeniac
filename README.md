@@ -11,23 +11,21 @@ Info Page for Project Monogeniac. You can find the live page under: [https://chr
 - Images: `static/img/`
 - Map Data: `assets/data/locations.json`
 
-## Development
+## Build Setup
 
 ```bash
 # install dependencies
-yarn install
+$ npm install
 
-# serve with hot reload at localhost:3000/monogeniac
-yarn dev
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
 ```
 
-Then you can start edit the [content](./content) directory.
-
-# Test for production
-
-```bash
-yarn generate
-serve dist/ # npm install -g serve
-```
-
-For detailed explanation on how things work on nuxt/vue, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

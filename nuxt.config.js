@@ -1,13 +1,34 @@
+import getRoutes from "./utils/getRoutes";
 
 const URL = process.env.NODE_ENV === 'production' ? 'https://chrishah.github.io/monogeniac' : 'http://localhost:3000/monogeniac';
 
 export default {
-  target: 'static',
+  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+  ssr: false,
+
+  // Target: https://go.nuxtjs.dev/config-target
+  target: "static",
+
   router: {
-    base: '/monogeniac/'
+    base: '/monogeniac'
   },
-  build: {
+  // https://github.com/nuxt/content/issues/376
+  hooks: {
+    "vue-renderer:spa:templateParams": function(params) {
+      params.HEAD = params.HEAD.replace('<base href="/monogeniac/">', '');
+    },    
+    build: {
+      done(builder) {
+      }
+    },
   },
+
+  generate: {
+    fallback: true,
+    routes: ["/"], // give the first url to start crawling
+  },
+
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: (chunk) => {
       if (chunk) {
@@ -28,11 +49,11 @@ export default {
       //{ rel: 'icon', type: 'image/x-icon', href: `/favicon.ico` }
     ]
   },
-  css: [
-    '@/assets/css/content.css',
-    '@/assets/css/custom.scss'
-  ],
-  loading: { color: '#48bb78' },
+
+  // Global CSS: https://go.nuxtjs.dev/config-css
+  css: ["@/assets/css/content.css", "@/assets/css/custom.css"],
+
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/markdown',
     '@/plugins/init',
@@ -41,60 +62,81 @@ export default {
     '@/plugins/menu.client',
     {src: '~/plugins/vue-leaflet', ssr: false },
   ],
+
+  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  generate: {
-    fallback: true,
-    routes: ['/'] // give the first url to start crawling
-  },
+
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
+    // https://go.nuxtjs.dev/typescript
+    "@nuxt/typescript-build",
     // Doc: https://github.com/nuxt-community/color-mode-module
-    '@nuxtjs/color-mode',
+    "@nuxtjs/color-mode",
+    // https://go.nuxtjs.dev/tailwindcss
+    "@nuxtjs/tailwindcss",
   ],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-i18n',
-    '@nuxt/content',
-    //'nuxt-leaflet'
+    // https://go.nuxtjs.dev/axios
+    // '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/content
+    "@nuxt/content",
+    // https://i18n.nuxtjs.org/
+    "nuxt-i18n",
+    // https://http.nuxtjs.org/
+    "@nuxt/http",
+    // https://sitemap.nuxtjs.org/
+    '@nuxtjs/sitemap'
   ],
-  colorMode: {
-    preference: 'system'
-  },
-  content: {
-    liveEdit: false,
-    markdown: {
-    remarkPlugins: [
-      'remark-emoji', 
-    ],
-      prism: {
-        theme: 'prism-themes/themes/prism-cb.css'
-      }
-    }
-  },
+
+  // https://i18n.nuxtjs.org/
   i18n: {
     locales: [
-    /*{
-      code: 'de',
-      iso: 'de-DE',
-      file: 'de-DE.js',
-      name: 'Deutsch'
-    },*/
-    {
-      code: 'en',
-      iso: 'en-US',
-      file: 'en-US.js',
-      name: 'English'
-    }],
-    defaultLocale: 'en',
+      {
+        code: "en",
+        iso: "en-US",
+        file: "en-US.js",
+        name: "English",
+      },
+    ],
+    defaultLocale: "en",
     parsePages: true,
     lazy: true,
     seo: true,
+    langDir: "i18n/",
     baseUrl: URL,
-    langDir: 'i18n/'
   },
-  hooks: {
-    "vue-renderer:ssr:templateParams": function (params) {
-      params.HEAD = params.HEAD.replace('<base href="/monogeniac/">', "");
-    }
-  }
-}
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  // axios: {},
+
+  // Content module configuration: https://go.nuxtjs.dev/config-content
+  content: {
+    liveEdit: false,
+    markdown: {
+      remarkPlugins: ["remark-emoji"],
+      prism: {
+        theme: 'prism-themes/themes/prism-cb.css'
+      }
+    },
+  },
+
+  // Doc: https://github.com/nuxt-community/color-mode-module
+  colorMode: {
+    preference: "system",
+  },
+
+  sitemap: {
+    hostname: URL,
+    path: 'sitemap.xml',
+    routes() {
+      return getRoutes();
+    },
+    i18n: true,
+    cacheTime: 1000 * 60 * 60 * 2,
+    trailingSlash: true,
+    gzip: true
+  },
+
+};
