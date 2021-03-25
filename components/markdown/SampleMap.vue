@@ -1,7 +1,7 @@
 <template>
 <div>
   <div style="height: 500px; width: 100%">
-    <l-map :zoom="zoom" :center="center" :options="mapOptions" style="height: 90%; z-index:9">
+    <l-map :zoom="zoom" :center="center" :options="mapOptions" style="height: 90%; z-index: 9;">
       <l-tile-layer :url="url" :attribution="attribution" />
       <template v-for="(location, index) in locations">
         <l-marker :ref="index" :key="index" :lat-lng="[location.lat, location.lng]">
@@ -29,7 +29,7 @@
       </thead>-->
       <tbody>
         <tr v-for="(location, index) in locations" :key="index">
-          <td class="px-4 py-2" v-on:click="highlight(index)"><b style="cursor:pointer;">{{index}}</b></td>
+          <td class="px-4 py-2" v-on:click="highlight(index)"><b style="cursor: pointer;">{{index}}</b></td>
           <td class="px-4 py-2">{{location.text}}</td>
         </tr>
       </tbody>

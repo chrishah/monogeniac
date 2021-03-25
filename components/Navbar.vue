@@ -21,8 +21,8 @@
           <SearchInput />
         </div>
         <div class="flex items-center justify-end w-1/6">
-          <LangSwitcher class="p-3 pr-5" />
-          <ColorSwitcher class="p-3 pr-5" />
+          <BaseLangSwitcher class="p-3 pr-5" />
+          <BaseColorSwitcher class="p-3 pr-5" />
           <button
             class="lg:hidden p-2 rounded-md hover:text-green-500 focus:outline-none -mr-2"
             aria-label="Hamburger Menu"
