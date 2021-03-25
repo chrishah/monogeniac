@@ -13,7 +13,7 @@ hello world
 
 <client-only>
 
-<sample-map></sample-map>
+<markdown-sample-map></markdown-sample-map>
 
 </client-only>
 

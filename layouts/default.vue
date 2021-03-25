@@ -28,7 +28,7 @@
                   class="mb-2 text-gray-500 dark:text-gray-600 uppercase tracking-wide font-bold text-sm lg:text-xs"
                 >More</h3>
 
-                <Socialicons socialclass="flex items-center ml-2" />
+                <BaseSocialicons socialclass="flex items-center ml-2" />
               </li>
             </ul>
           </div>

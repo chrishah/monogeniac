@@ -13,9 +13,9 @@ hello world
 
 <client-only>
 
-<sample-map>
+<markdown-sample-map>
 
-</sample-map>
+</markdown-sample-map>
 
 </client-only>
 

@@ -12,12 +12,12 @@ export default {
   props: {
     items: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     iconColor: {
       type: String,
-      default: "text-yellow-500"
-    }
-  }
-}
+      default: "text-yellow-500",
+    },
+  },
+};
 </script>
