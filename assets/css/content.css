@@ -1,6 +1,5 @@
 .nuxt-content {
-  & h2,
-  & h3 {
+  & h2, & h3 {
     /* Fix anchor scrollTo */
     &::before {
       display: block;
@@ -16,8 +15,8 @@
       @apply ml-5;
 
       &::before {
-         content: "#";
-         @apply text-green-500 font-normal -ml-5 pr-2 absolute opacity-100;
+        content: "#";
+        @apply text-green-500 font-normal -ml-5 pr-2 absolute opacity-100;
       }
 
       @screen lg {
